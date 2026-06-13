@@ -10,6 +10,8 @@
 import os
 import streamlit as st
 
+st.set_page_config(page_title="Agente de RH com RAG", layout="wide")
+
 # Configura a chave da OpenAI a partir dos secrets do Streamlit ou variável de ambiente
 if "OPENAI_API_KEY" in st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
@@ -241,7 +243,6 @@ Pergunta:
 # 9. INTERFACE STREAMLIT
 # =========================
 
-st.set_page_config(page_title="Agente de RH com RAG", layout="wide")
 st.title("🤖 Agente de RH — Políticas Internas")
 
 pergunta = st.text_input("Digite sua pergunta sobre políticas internas de RH:")
